@@ -1,0 +1,174 @@
+description = "Default layout"
+
+[services]
+serviceName = 1
+
+[feedbacklist]
+maxFeeds = 4
+feedType = "list"
+sortOrder = "desc"
+
+[formwidget formwidget2]
+
+[formwidget]
+==
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        {% partial "app/meta" %}
+    </head>
+    <body class="home">
+        {% partial "app/preloader" %}
+        {% partial "app/header" %}
+        <main>
+            <section class="intro section">
+                <div class="container">
+                    <div class="row intro__wrap">
+                        <div class="intro__content">
+                            <div class="intro__content-text">
+                                <h1 class="intro__title">
+                                    Производство упаковочных материалов
+                                </h1>
+                                <p class="intro__subtitle"></p>
+                                <button
+                                    class="
+                                        intro__button
+                                        popup-open
+                                        rounded-pill
+                                    "
+                                    type="button"
+                                >
+                                    Оставить заявку
+                                </button>
+                            </div>
+                            <div class="intro__contact">
+                                <a
+                                    class="intro__contact-phone"
+                                    href="tel:{{ this.theme.theme_site_phones[0].phone_href }}"
+                                >
+                                    {{
+                                    this.theme.theme_site_phones[0].phone_text
+                                    }}
+                                </a>
+                                <a
+                                    class="intro__contact-email"
+                                    href="mailto:{{ this.theme.theme_site_mail }}"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="currentColor"
+                                        class="intro__contact-envelope"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path
+                                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+                                        />
+                                    </svg>
+                                    или просто отправьте заявку на {{
+                                    this.theme.theme_site_mail }}
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="intro__props">
+                            <div class="intro__props-title">
+                                Пожалуй, лучший производитель упаковочной
+                                продукции для промышленности, торговли, и
+                                складов
+                            </div>
+                            <div class="intro__props-item">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="intro__props-ico"
+                                    fill="currentColor"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"
+                                    ></path>
+                                </svg>
+                                <p class="intro__props-val">
+                                    К каждому клиенту индивидуальный подход
+                                </p>
+                            </div>
+                            <div class="intro__props-item">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    viewBox="0 0 16 16"
+                                    class="intro__props-ico"
+                                >
+                                    <path
+                                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"
+                                    ></path>
+                                </svg>
+                                <p class="intro__props-val">
+                                    Цена на пакеты от 2 рублей за шт.
+                                </p>
+                            </div>
+                            <div class="intro__props-item">
+                                <svg
+                                    viewBox="0 0 18 22"
+                                    fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="intro__props-ico"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M9 0L0 4V10C0 15.55 3.84 20.74 9 22C14.16 20.74 18 15.55 18 10V4L9 0ZM16 10C16 14.52 13.02 18.69 9 19.93C4.98 18.69 2 14.52 2 10V5.3L9 2.19L16 5.3V10ZM3 12L4.41 10.59L7 13.17L13.59 6.58L15 8L7 16L3 12Z"
+                                    ></path>
+                                </svg>
+                                <p class="intro__props-val">
+                                    Гарантия на вакуумные упаковщики до 5 лет
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {% component 'formwidget::horizontal' %} {% component 'services' %}
+
+            <section class="about">{% page %}</section>
+
+            {% component 'feedbacklist' %}
+
+            <section class="slide question">
+                <div class="container">
+                    <div class="caption text-center">
+                        <div>
+                            <p>Остались вопросы?</p>
+                            <div class="question__title">Звоните сейчас.</div>
+                            <div class="phone">
+                                <a
+                                    href="tel:{{ this.theme.theme_site_phones[0].phone_href }}"
+                                    >{{
+                                    this.theme.theme_site_phones[0].phone_text
+                                    }}</a
+                                >
+                            </div>
+                            <button class="popup-open theme-btn rounded-pill question__btn">
+                                Заказать звонок
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {% partial "app/map" %}
+        </main>
+
+        <!-- Footer -->
+        {% partial "app/footer" %}
+        <!-- Modal-->
+        <div class="popup-fade">
+          <div class="popup rounded">
+              <a class="popup-close" href="#"><i class="fas fa-times"></i></a>
+              <div class="title" data-modal="title">Оставить заявку</div>
+              {% component 'formwidget' %}
+          </div>
+        </div>
+        <!-- Optional JavaScript -->
+        {% partial "app/scripts" %}
+    </body>
+</html>

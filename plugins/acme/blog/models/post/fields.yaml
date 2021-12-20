@@ -1,0 +1,50 @@
+fields:
+    title:
+        label: Заголовок
+        span: auto
+        type: text
+    slug:
+        label: Слаг
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    is_published:
+        label: 'Опубликовать?'
+        span: full
+        type: switch
+tabs:
+    fields:
+        content:
+            label: Контент
+            size: large
+            span: full
+            type: richeditor
+            tab: Контент
+        poster:
+            label: Изображение
+            mode: image
+            imageWidth: '100'
+            imageHeight: '100'
+            span: auto
+            type: mediafinder
+            tab: Контент
+        categories:
+            label: Категории
+            type: partial
+            path: field_category
+            span: auto
+            tab: Контент
+        seo_description:
+            label: 'Мета описание'
+            size: small
+            span: full
+            type: textarea
+            tab: SEO
+        seo_keywords:
+            label: 'Мета заголовок'
+            size: tiny
+            span: full
+            type: textarea
+            tab: SEO

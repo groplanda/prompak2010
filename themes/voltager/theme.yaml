@@ -1,0 +1,6 @@
+name: Voltager
+description: 'Electrican theme bootstrap 4'
+author: Acme
+homepage: ''
+code: ''
+form: config/fields.yaml

@@ -1,0 +1,24 @@
+fields:
+    title:
+        label: Заголовок
+        span: auto
+        type: text
+    user_mail:
+        label: E-mail
+        span: auto
+        type: email
+    is_published:
+        label: 'Опубликовать?'
+        span: full
+        type: switch
+    description:
+        label: Текст
+        size: large
+        span: full
+        type: textarea
+    post:
+        label: Пост
+        nameFrom: title
+        descriptionFrom: description
+        span: full
+        type: relation

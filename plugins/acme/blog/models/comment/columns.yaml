@@ -1,0 +1,18 @@
+columns:
+    id:
+        label: Id
+        type: number
+        sortable: true
+    title:
+        label: Заголовок
+        type: text
+        searchable: true
+        sortable: true
+    created_at:
+        label: 'Дата создания'
+        type: datetime
+        sortable: true
+    is_published:
+        label: 'Опубликован?'
+        type: switch
+        sortable: true

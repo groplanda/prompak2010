@@ -1,0 +1,29 @@
+plugin:
+    name: 'acme.blog::lang.plugin.name'
+    description: 'acme.blog::lang.plugin.description'
+    author: Acme
+    icon: oc-icon-wordpress
+    homepage: ''
+navigation:
+    blog:
+        label: 'Блог'
+        url: acme/blog/postscontroller
+        icon: icon-wordpress
+        iconSvg: plugins/acme/blog/assets/images/blog-icon.svg
+        sideMenu:
+            create-post:
+                label: 'Создать запись'
+                url: acme/blog/postscontroller/create
+                icon: icon-plus
+            posts:
+                label: Записи
+                url: acme/blog/postscontroller
+                icon: icon-pencil-square-o
+            categories:
+                label: Категории
+                url: acme/blog/categoriescontroller
+                icon: icon-tags
+            comments:
+                label: Комментарии
+                url: acme/blog/commentscontroller
+                icon: icon-comment-o

@@ -1,0 +1,39 @@
+{% set advantage = __SELF__.advantages %}
+{% set rows = advantage.advantages %}
+
+<section class="steps">
+  <div class="container-fluid">
+      <h2 class="mb-5 title">{{advantage.title}}</h2>
+      <div class="row">
+        {% for row in rows %}
+        {% set ico = row.advantages_ico %}
+
+          {% if loop.index%2 !=0 %}
+          <div class="col-12 col-md-2 steps__item">
+              <div class="icon rounded-circle m-auto">
+                  <img src="{{ ico|media }}" srcset="{{ ico|media }}" alt="{{ row.advantages_title }}">
+              </div>
+              <div class="content mt-4 text-center">
+                  <h6>{{ row.advantages_title }}</h6>
+                  <p>
+                    {{ row.advantages_desc }}
+                  </p>
+              </div>
+          </div><!--step-->
+          {% else %}
+          <div class="col-12 col-md-2 steps__item">
+              <div class="content mb-4 text-center">
+                <h6>{{ row.advantages_title }}</h6>
+                <p>
+                  {{ row.advantages_desc }}
+                </p>
+              </div>
+              <div class="icon rounded-circle m-auto">
+                  <img src="{{ ico|media }}" alt="{{ row.advantages_title }}">
+              </div>
+          </div><!--step-->
+          {% endif %}
+        {% endfor %}
+      </div>
+  </div>
+</section>

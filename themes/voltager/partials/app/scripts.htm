@@ -1,0 +1,8 @@
+description = "Scripts"
+
+[viewBag]
+==
+<script src="{{ 'assets/dist/js/app.js' |theme }}"></script>
+{% framework extras %}
+{% scripts %}
+{{ this.theme.theme_site_metrika|raw }}

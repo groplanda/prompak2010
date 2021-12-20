@@ -1,0 +1,20 @@
+title = "Robots"
+url = "/robots.txt"
+is_hidden = 0
+==
+<?php
+function onStart() {
+  $content = $this->page->markup;
+  return Response::make($content)->header('Content-Type', 'text/plain');
+}
+?>
+==
+User-agent: *
+Disallow: /search
+Disallow: /trackback
+Disallow: /storage
+Allow: /storage/app/media
+
+Sitemap: http://prompak2010.ru/sitemap.xml
+
+Host: http://prompak2010.ru

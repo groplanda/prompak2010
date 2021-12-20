@@ -1,0 +1,11 @@
+name: PostsController
+modelClass: Acme\Blog\Models\Post
+form: $/acme/blog/models/post/fields.yaml
+defaultRedirect: acme/blog/postscontroller
+create:
+    redirect: 'acme/blog/postscontroller/update/:id'
+    redirectClose: acme/blog/postscontroller
+update:
+    redirect: acme/blog/postscontroller
+    redirectClose: acme/blog/postscontroller
+preview: {  }

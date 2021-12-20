@@ -1,0 +1,19 @@
+{% if posts.total > 0 %}
+
+    {% for post in posts %}
+        <div class="thumbnail">
+            <div class="caption">
+            <h4>{{ post.title }}</h4>
+            <p>{{  html_limit(post.content, 100, '...') }}</p>
+            <p><a href="{{ 'post' | page({ slug: post.slug }) }}" class="btn btn-primary" role="button">Читать далее</a></p>
+            </div>
+        </div>
+    {% endfor %}
+    
+{% else %}
+        <div class="thumbnail">
+            <div class="caption">
+                <p>Нет записей...</p>
+            </div>
+        </div>
+{% endif %}

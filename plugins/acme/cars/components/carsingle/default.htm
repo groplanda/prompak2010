@@ -1,0 +1,50 @@
+{% set car = __SELF__.car %}
+<section class="single-product">
+  <div class="container">
+    <div class="single-product__wrapper row">
+      <div class="col-md-10 col-lg-6">
+        <div class="single-product__pic">
+          <img class="single-product__thumb" src="{{ car.image|media|resize(false, 320, { quality: '90' }) }}" alt="{{ car.title }}" data-lightbox="product" />
+        </div>
+
+        {% if car.gallery %}
+        <div class="single-product__gallery">
+          <div class="single-product__gallery-list">
+            {% for image in car.gallery %}
+            <a href="{{ image.path }}" class="single-product__gallery-link" data-lightbox="product">
+              <img class="single-product__gallery-thumb" src="{{ image.thumb(120, 120, { 'mode': 'crop', quality: '100' }) }}" alt="{{ image.title }}" />
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="col-md-10 col-lg-6">
+        <div class="single-product__content">
+          <h1 class="single-product__title">{{ car.title }}</h1>
+          <div class="single-product__description">{{ car.description|raw }}</div>
+
+          {% if car.category|length > 0 %}
+          <p class="single-product__category-title">Категория: </p>
+          <ul class="single-product__category-list">
+            {% for category in car.category %}
+            <li class="single-product__category-item">
+              <a href="{{ 'category'|page({ slug: category.slug }) }}" class="single-product__category-link">
+                {{ category.title }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          {% if car.price %}
+            <p class="single-product__price">Цена:&nbsp;<span>{{ car.price }}</span>₽</p>
+          {% endif %}
+          <button class="single-product__button call-modal theme-btn rounded-pill popup-open" data-title="{{ car.title }}">Оформить заказ</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

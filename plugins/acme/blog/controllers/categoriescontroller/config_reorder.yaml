@@ -1,0 +1,5 @@
+title: CategoriesController
+nameFrom: title
+modelClass: Acme\Blog\Models\Category
+toolbar:
+    buttons: reorder_toolbar

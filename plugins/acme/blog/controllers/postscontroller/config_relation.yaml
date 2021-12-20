@@ -1,0 +1,10 @@
+categories:
+  label: Категории
+  view:
+    list: $/acme/blog/models/category/columns.yaml
+    toolbarButtons: add|remove|create
+  manage:
+    form: $/acme/blog/models/category/fields.yaml
+    showCheckboxes: true
+    showSearch: true
+    recordsPerPage: 10

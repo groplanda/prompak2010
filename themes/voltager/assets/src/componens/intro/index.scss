@@ -1,0 +1,231 @@
+.intro {
+  padding: 60px 0;
+  position: relative;
+  background-image: url('/themes/voltager/assets/images/slide.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media(min-width: 768px) {
+    padding: 120px 0;
+  }
+
+  &::before {
+    background: rgba($color: $primary, $alpha: .75);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    max-width: 450px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media(min-width: 768px) {
+      max-width: 420px;
+      padding-left: 0;
+    }
+
+    @media(min-width: 992px) {
+      max-width: 550px;
+    }
+
+    @media(min-width: 1200px) {
+      max-width: 715px;
+      padding-right: 20px;
+    }
+
+  }
+
+  &__content-text {
+    margin-bottom: 30px;
+
+    @media(min-width: 992px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    color: $whiteColor;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 20px;
+
+    @media(min-width: 768px) {
+      font-size: 28px;
+    }
+
+    @media(min-width: 992px) {
+      font-size: 35px;
+    }
+
+    @media(min-width: 1200px) {
+      font-size: 50px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__subtitle {
+    max-width: 340px;
+    color: $whiteColor;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+
+    @media(min-width: 768px) {
+      max-width: 400px;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__button {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 35px;
+    height: 45px;
+    color: $whiteColor;
+    background: $blueColor;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+
+    &:hover {
+      box-shadow: none;
+      background: $blueColorHover;
+    }
+
+    @media(min-width: 768px) {
+      font-size: 16px;
+      padding: 10px 40px;
+      height: 50px;
+    }
+  }
+
+  &__contact {
+    margin-bottom: 20px;
+
+    @media(min-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__contact-phone {
+    display: block;
+    color: $whiteColor;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 12px;
+
+    @media(min-width: 768px) {
+      font-size: 40px;
+      line-height: 50px;
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      color: $blueColor;
+      text-decoration: none;
+    }
+  }
+
+  &__contact-email {
+    display: flex;
+    align-items: center;
+    color: $whiteColor;
+    font-size: 14px;
+    line-height: 20px;
+
+    @media(min-width: 768px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &:hover {
+      color: $lightColor;
+      text-decoration: none;
+    }
+  }
+
+  &__contact-envelope {
+    color: $whiteColor;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__props {
+    flex: 1 1;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media(min-width: 768px) {
+      padding: 0;
+    }
+  }
+
+  &__props-title {
+    color: $whiteColor;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 20px;
+
+    @media(min-width: 768px) {
+      font-size: 16px;
+    }
+
+    @media(min-width: 992px) {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__props-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__props-ico {
+    fill: $blueColor;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+
+    @media(min-width: 768px) {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+  }
+
+  &__props-val {
+    flex: 1 1;
+    color: $whiteColor;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+
+    @media(min-width: 768px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

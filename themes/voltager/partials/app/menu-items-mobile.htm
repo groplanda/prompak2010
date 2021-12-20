@@ -1,0 +1,37 @@
+description = "Menu items mobile"
+
+[viewBag]
+==
+<div class="mobile-nav__menu">
+  {% for item in items %}
+  <div class="mobile-nav__menu-item">
+    <a
+      href="{{ item.items ? '#!' : item.url }}"
+      class="
+        mobile-nav__menu-link
+        {{ item.isActive or item.isChildActive ? ' mobile-nav__menu-link_active' : '' }}
+        {{ item.items ? ' js-mobile-toggle' : '' }}
+      "
+    >
+      {{ item.title }}
+      {% if item.items %}
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mobile-nav__menu-arrow">
+        <g data-name="Layer 2">
+          <g data-name="arrow-ios-downward">
+            <rect width="24" height="24" opacity="0"/>
+            <path d="M12 16a1 1 0 0 1-.64-.23l-6-5a1 1 0 1 1 1.28-1.54L12 13.71l5.36-4.32a1 1 0 0 1 1.41.15 1 1 0 0 1-.14 1.46l-6 4.83A1 1 0 0 1 12 16z"/>
+          </g>
+        </g>
+      </svg>
+      {% endif %}
+    </a>
+    {% if item.items %}
+    <div class="mobile-nav__menu-dropdown js-mobile-dropdown">
+      {% for subitem in item.items %}
+      <a href="{{ subitem.url }}" class="mobile-nav__menu-sublink{{ item.isActive or item.isChildActive ? ' mobile-nav__menu-link_active' : '' }}">{{ subitem.title }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>

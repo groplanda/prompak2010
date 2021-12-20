@@ -1,0 +1,27 @@
+<form
+  data-request="{{ __SELF__ }}::onSend"
+  data-request-validate
+  data-request-flash
+  >
+  <div class="form-group valid">
+      <input class="input" type="text" name="name" placeholder="Ваше имя">
+      <span class="text-danger small" data-validate-for="name"></span>
+  </div>
+  <div class="form-group valid">
+      <input class="input phone__mask" type="text"  name="phone" placeholder="Ваш телефон">
+      <span class="text-danger small" data-validate-for="phone"></span>
+  </div>
+  <div class="form-group valid">
+      <input class="input" type="email" name="user_mail" placeholder="Ваш e-mail">
+      <span class="text-danger small" data-validate-for="user_mail"></span>
+  </div>
+  <div class="form-group mb-0">
+      <button type="submit" class="theme-btn rounded-pill w-100" data-attach-loading>Отправить</button>
+      <input type="hidden" name="product" data-form="product-name" value="">
+  </div>
+  {% flash %}
+    <div class="alert alert-{{ type }}" data-interval="4">
+        {{ message }}
+    </div>
+  {% endflash %}
+</form>

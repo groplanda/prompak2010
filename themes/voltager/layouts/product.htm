@@ -1,0 +1,32 @@
+description = "Product page"
+
+[formwidget]
+==
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        {% partial "app/meta" %}
+    </head>
+    <body class="page">
+        {% partial "app/preloader" %}
+        {% partial "app/header" %}
+
+        <main>
+          {% partial "app/breadcrumbs" list=[{title: 'Каталог', url: 'catalog'}] %}
+          {% page %}
+        </main>
+
+        <!-- Footer -->
+        {% partial "app/footer" %}
+        <!-- Modal-->
+        <div class="popup-fade">
+          <div class="popup rounded">
+              <a class="popup-close" href="#"><i class="fas fa-times"></i></a>
+              <div class="title" data-modal="title">Оставить заявку</div>
+              {% component 'formwidget' %}
+          </div>
+        </div>
+        <!-- Optional JavaScript -->
+        {% partial "app/scripts" %}
+    </body>
+</html>

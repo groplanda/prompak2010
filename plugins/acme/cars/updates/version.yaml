@@ -1,0 +1,20 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table acme_cars_car'
+    - builder_table_create_acme_cars_car.php
+1.0.3:
+    - 'Updated table acme_cars_car'
+    - builder_table_update_acme_cars_car.php
+1.0.4:
+    - 'Created table acme_cars_category'
+    - builder_table_create_acme_cars_category.php
+1.0.5:
+    - 'Created table acme_cars_car_category'
+    - builder_table_create_acme_cars_car_category.php
+1.0.6:
+    - 'Updated table acme_cars_car'
+    - builder_table_update_acme_cars_car_2.php
+1.0.7:
+    - 'Updated table acme_cars_category'
+    - builder_table_update_acme_cars_category.php

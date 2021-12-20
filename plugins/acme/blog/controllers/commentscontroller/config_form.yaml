@@ -1,0 +1,10 @@
+name: CommentsController
+form: $/acme/blog/models/comment/fields.yaml
+modelClass: Acme\Blog\Models\Comment
+defaultRedirect: acme/blog/commentscontroller
+create:
+    redirect: 'acme/blog/commentscontroller/update/:id'
+    redirectClose: acme/blog/commentscontroller
+update:
+    redirect: acme/blog/commentscontroller
+    redirectClose: acme/blog/commentscontroller

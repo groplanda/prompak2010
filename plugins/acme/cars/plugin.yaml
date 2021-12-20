@@ -1,0 +1,24 @@
+plugin:
+    name: 'acme.cars::lang.plugin.name'
+    description: 'acme.cars::lang.plugin.description'
+    author: Acme
+    icon: oc-icon-car
+    homepage: ''
+navigation:
+    main-menu-car:
+        label: Товары
+        url: acme/cars/cars
+        icon: icon-folder-open
+        sideMenu:
+            side-menu-cars:
+                label: 'Все товары'
+                url: acme/cars/cars
+                icon: icon-book
+            side-menu-car-add:
+                label: Добавить
+                url: acme/cars/cars/create
+                icon: icon-plus
+            side-menu-category:
+                label: Категории
+                url: acme/cars/categories
+                icon: icon-list

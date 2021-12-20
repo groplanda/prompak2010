@@ -1,0 +1,14 @@
+columns:
+    title:
+        label: Заголовок
+        type: text
+        searchable: true
+        sortable: true
+    created_at:
+        label: Создан
+        type: datetime
+        sortable: true
+    is_published:
+        label: Статус
+        type: switch
+        sortable: true

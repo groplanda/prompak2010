@@ -1,0 +1,47 @@
+
+<section class="news">
+  <div class="container">
+      <h6 class="theme-subtitle w-100 text-center">блог нашей компании</h6>
+      <h2 class="theme-title w-100 text-center">
+          <span>Новости и статьи</span>
+      </h2>
+
+      <div class="news__wrap">
+          <div class="row">
+              {% if posts.total > 0 %}
+              {% for post in posts %}
+              <article class="post-{{ loop.index }} item">
+                  <div class="media">
+                      <a href="{{ 'post' | page({ slug: post.slug }) }}">
+                          <img class="img-fluid" src="{{ post.poster | media | resize(500, 320, { mode: 'crop', quality: '80'}) }}" alt="{{ post.title }}">
+                      </a>
+                  </div>
+                  <div class="content">
+                      <h6>{{ post.title }}</h6>
+                      <p>
+                        {{  html_limit(post.content, 100, '...') }}
+                      </p>
+                      <div class="meta">
+                          <span>
+                              <i class="fas fa-clock"></i> {{post.created_at}} | 
+                          </span>
+                          {% for category in categories %}
+                          <span>
+                              {{ category.title }}
+                          </span>
+                          {% endfor %}
+                      </div>
+                      <div class="link">
+                          <a href="{{ 'post' | page({ slug: post.slug }) }}">Подробнее</a>
+                      </div>
+                  </div>
+              </article>
+              {% endfor %}
+              {% else %}
+                <p>Нет записей...</p>
+              {% endif %}
+          </div>
+      </div>
+
+  </div>
+</section>

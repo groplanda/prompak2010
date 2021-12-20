@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Magistral';
+  src: local('Magistral Book'), local('Magistral-Book'),
+      url('/themes/voltager/assets/fonts/Magistral-Book.woff2') format('woff2'),
+      url('/themes/voltager/assets/fonts/Magistral-Book.woff') format('woff'),
+      url('/themes/voltager/assets/fonts/Magistral-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Magistral';
+  src: local('Magistral Bold'), local('Magistral-Bold'),
+      url('/themes/voltager/assets/fonts/Magistral-Bold.woff2') format('woff2'),
+      url('/themes/voltager/assets/fonts/Magistral-Bold.woff') format('woff'),
+      url('/themes/voltager/assets/fonts/Magistral-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}

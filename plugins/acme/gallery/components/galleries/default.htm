@@ -1,0 +1,30 @@
+{% set gallery = __SELF__.gallery %}
+
+<div id="{{ __SELF__.id }}" class="gallery galleries wow fadeInDownBig">
+  <div class="container">
+      <div class="row">
+          <div class="title">
+              <div class="col-12 col-sm-12 col-md-8 offset-md-2">
+              <span>{{ gallery.title }}</span>
+              <p>{{ gallery.description }}</p>
+              </div>
+          </div>
+          <div class="col-12  col-sm-12">
+              <div class="slick">
+                {% for image in gallery.gallery %}
+                  <div class="gallery-block">
+                  <img 
+                  src="{{image.thumb(250, auto, {'mode': 'crop'})}}" 
+                  alt="{% if image.title %}{{ image.title }}{% else %}Фотография{% endif %}"
+                  />
+                  </div>
+                {% endfor %}
+              </div>
+              <div class="arrows">
+                  <div class="prev wow bounceIn"></div>
+                  <div class="next wow bounceIn"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

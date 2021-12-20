@@ -1,0 +1,5 @@
+title: Cars
+nameFrom: title
+modelClass: Acme\Cars\Models\Car
+toolbar:
+    buttons: reorder_toolbar

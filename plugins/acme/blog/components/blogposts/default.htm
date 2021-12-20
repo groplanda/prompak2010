@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form
+            role="form"
+            data-request="onFilterPosts"
+            data-request-update="'@list.htm': '#partialPosts', '@pagination.htm': '#partialPaginate'">
+            <div class="list-group" id="postFilter">
+                <ul class="list-group">
+                {% for category in categories %}
+                <li class="list-group-item">
+                    <span class="badge"></span>
+                    <input class="checkbox_cat" type="checkbox" value="{{ category.id }}" name="filter[categories][]">
+                    <label>{{ category.title }}</label>
+                </li>
+                {% endfor %}
+                </ul>
+                <div>
+                    <select class="sort_select form-control" name="filter[sort]">
+                        {% for code, option in sortOptions %}
+                        <option value="{{ code }}">{{ option }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="col-md-8 main-section">
+            <h1>Все новости</h1>
+            
+            <div id="partialPosts">
+                {% partial "BlogPosts::list" %}
+            </div>
+
+            <div id="partialPaginate">
+                {% partial 'BlogPosts::pagination' %}
+            </div>
+
+        </div>
+    </div>
+</div>

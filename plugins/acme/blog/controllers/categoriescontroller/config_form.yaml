@@ -1,0 +1,10 @@
+name: CategoriesController
+form: $/acme/blog/models/category/fields.yaml
+modelClass: Acme\Blog\Models\Category
+defaultRedirect: acme/blog/categoriescontroller
+create:
+    redirect: 'acme/blog/categoriescontroller/update/:id'
+    redirectClose: acme/blog/categoriescontroller
+update:
+    redirect: acme/blog/categoriescontroller
+    redirectClose: acme/blog/categoriescontroller

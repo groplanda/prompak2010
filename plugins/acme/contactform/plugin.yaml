@@ -1,0 +1,11 @@
+plugin:
+    name: 'acme.contactform::lang.plugin.name'
+    description: 'acme.contactform::lang.plugin.description'
+    author: Acme
+    icon: oc-icon-envelope
+    homepage: ''
+navigation:
+    contact-form:
+        label: Заявки
+        url: acme/contactform/messages
+        icon: icon-envelope

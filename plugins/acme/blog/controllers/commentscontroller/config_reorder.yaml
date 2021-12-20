@@ -1,0 +1,5 @@
+title: CommentsController
+nameFrom: title
+modelClass: Acme\Blog\Models\Comment
+toolbar:
+    buttons: reorder_toolbar

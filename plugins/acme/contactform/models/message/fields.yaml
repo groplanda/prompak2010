@@ -1,0 +1,17 @@
+fields:
+    name:
+        label: Имя
+        span: auto
+        type: text
+    phone:
+        label: Телефон
+        span: auto
+        type: text
+    created_at:
+        label: Время
+        span: full
+        type: text
+    user_product:
+        label: Товар
+        span: full
+        type: text

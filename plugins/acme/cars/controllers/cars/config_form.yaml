@@ -1,0 +1,10 @@
+name: Cars
+form: $/acme/cars/models/car/fields.yaml
+modelClass: Acme\Cars\Models\Car
+defaultRedirect: acme/cars/cars
+create:
+    redirect: 'acme/cars/cars/update/:id'
+    redirectClose: acme/cars/cars
+update:
+    redirect: acme/cars/cars
+    redirectClose: acme/cars/cars

@@ -1,0 +1,9 @@
+<p>
+  Вам пришло сообщение от <b>{{ name }}</b> - <b>{{ phone }}</b>
+</p>
+{% if user_mail %}
+<p>E-mail: {{ user_mail }}</p>
+{% endif %}
+{% if user_product %}
+<p>Товар: {{ user_product }}</p>
+{% endif %}

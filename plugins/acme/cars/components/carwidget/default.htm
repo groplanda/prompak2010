@@ -1,0 +1,30 @@
+{% set cars = __SELF__.cars %}
+{% set category = __SELF__.category %}
+<section class="category section">
+  <div class="container">
+    <h1 class="category__title">{{ category.title }}</h1>
+    <div class="category__description">
+      {{ category.description|raw }}
+    </div>
+    <div class="row">
+      {% for car in cars %}
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 category__item">
+        <a class="category__item" href="{{ 'product'|page({ slug: car.slug }) }}">
+          <div class="category__item-pic">
+            <img class="category__item-thumb" src="{{ car.image|media|resize(280, 280, { quality: '90' }) }}" alt="{{ car.title }}" />
+          </div>
+          <div class="category__item-body">
+            <div class="category__item-title">
+              {{ car.title }}
+            </div>
+            <div class="category__item-description">
+              {{ str_limit(car.description, 190)|raw }}
+            </div>
+            <button type="button" class="category__item-button theme-btn rounded-pill popup-open" data-title="{{ car.title }}">Заказать</button>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

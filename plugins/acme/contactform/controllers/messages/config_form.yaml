@@ -1,0 +1,10 @@
+name: Messages
+form: $/acme/contactform/models/message/fields.yaml
+modelClass: Acme\Contactform\Models\Message
+defaultRedirect: acme/contactform/messages
+create:
+    redirect: 'acme/contactform/messages/update/:id'
+    redirectClose: acme/contactform/messages
+update:
+    redirect: acme/contactform/messages
+    redirectClose: acme/contactform/messages

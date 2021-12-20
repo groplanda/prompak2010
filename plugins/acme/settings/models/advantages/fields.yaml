@@ -1,0 +1,33 @@
+fields:
+    title:
+        label: Заголовок
+        span: full
+        type: text
+    description:
+        label: Описание
+        size: small
+        span: full
+        type: textarea
+    advantages:
+        label: Преимущество
+        prompt: 'Add new item'
+        span: full
+        type: repeater
+        form:
+            fields:
+                advantages_title:
+                    label: Заголовок
+                    span: full
+                    type: text
+                advantages_desc:
+                    label: Описание
+                    size: small
+                    span: full
+                    type: textarea
+                advantages_ico:
+                    label: Иконка
+                    mode: image
+                    imageWidth: '80'
+                    imageHeight: '80'
+                    span: auto
+                    type: mediafinder

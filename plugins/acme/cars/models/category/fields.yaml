@@ -1,0 +1,28 @@
+fields:
+    title:
+        label: Заголовок
+        span: auto
+        type: text
+    slug:
+        label: Url
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    image:
+        label: Фото
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    description:
+        label: Описание
+        size: huge
+        span: full
+        type: richeditor

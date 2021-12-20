@@ -1,0 +1,88 @@
+tabs:
+
+  fields:
+    theme_site_address:
+      tab: "Контакты"
+      label: "Адрес"
+      type: text
+      default: ""
+      placeholder: ""
+
+    theme_site_open:
+      tab: "Контакты"
+      label: "График работы"
+      type: text
+      default: ""
+      placeholder: ""
+
+    theme_site_mail:
+      tab: "Контакты"
+      label: "E-mail"
+      type: email
+      default: ""
+      placeholder: ""
+
+    theme_site_tg:
+      tab: "Контакты"
+      label: "Telegram"
+      type: text
+      default: ""
+      placeholder: ""
+
+    theme_site_wa:
+      tab: "Контакты"
+      label: "Whatsapp"
+      type: text
+      default: ""
+      placeholder: ""
+
+    theme_site_phones:
+      tab: "Контакты"
+      type: repeater
+      label: "Телефон"
+      prompt: "Добавить телефон"
+      form:
+        fields:
+          phone_text:
+              label: Текст
+              text: text
+              span: auto
+          phone_href:
+              label: Ссылка
+              text: text
+              span: auto
+
+    theme_site_vk:
+      tab: "Соц сети"
+      label: "Vk"
+      type: text
+      default: ""
+      placeholder: ""
+    theme_site_instagram:
+      tab: "Соц сети"
+      label: "Instagram"
+      type: text
+      default: ""
+      placeholder: ""
+
+    theme_site_name:
+      tab: "Общие"
+      label: "Название сайта"
+      type: text
+      default: ""
+      placeholder: "Промпак"
+
+    theme_site_logo:
+      tab: "Общие"
+      label: "Логотип"
+      type: mediafinder
+      mode: image
+      imageWidth: 100
+
+    theme_site_metrika:
+        label: Коды метрик
+        type: codeeditor
+        size: huge
+        language: html
+        span: full
+        tab: Общие

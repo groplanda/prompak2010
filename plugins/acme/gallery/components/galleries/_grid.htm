@@ -1,0 +1,13 @@
+{% set gallery = __SELF__.gallery %}
+
+<div id="{{ __SELF__ }}" class="theme-gallery mb-5">
+
+  <h2 class="text-center title w-100">{{ gallery.title }}</h2>
+
+  {% for image in gallery.gallery %}
+  <a href="{{image.path}}" data-fancybox="gallery" class="theme-gallery__item shadow rounded" data-caption="{{ image.title }}">
+      <img src="{{image.thumb(250, auto, {'mode': 'crop'})}}" alt="{{ image.title }}" class="rounded" />
+  </a><!--item-->
+  {% endfor %}
+
+</div>

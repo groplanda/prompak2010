@@ -1,0 +1,68 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table acme_blog_posts'
+    - builder_table_create_acme_blog_posts.php
+1.0.3:
+    - 'Updated table acme_blog_posts'
+    - builder_table_update_acme_blog_posts.php
+1.0.4:
+    - 'Created table acme_blog_categories'
+    - builder_table_create_acme_blog_categories.php
+1.0.5:
+    - 'Updated table acme_blog_categories'
+    - builder_table_update_acme_blog_categories.php
+1.0.6:
+    - 'Created table acme_blog_posts_categories'
+    - builder_table_create_acme_blog_posts_categories.php
+1.0.7:
+    - 'Updated table acme_blog_posts'
+    - builder_table_update_acme_blog_posts_2.php
+1.0.8:
+    - 'Updated table acme_blog_posts'
+    - builder_table_update_acme_blog_posts_3.php
+1.0.9:
+    - 'Updated table acme_blog_posts'
+    - builder_table_update_acme_blog_posts_4.php
+1.0.10:
+    - 'Created table acme_blog_comments'
+    - builder_table_create_acme_blog_comments.php
+1.0.11:
+    - 'Updated table acme_blog_comments'
+    - builder_table_update_acme_blog_comments.php
+1.0.12:
+    - 'Updated table acme_blog_comments'
+    - builder_table_update_acme_blog_comments_2.php
+1.0.13:
+    - 'Updated table acme_blog_posts'
+    - builder_table_update_acme_blog_posts_5.php
+1.0.14:
+    - 'Updated table acme_blog_posts'
+    - builder_table_update_acme_blog_posts_6.php
+1.0.15:
+    - 'Updated table acme_blog_posts'
+    - builder_table_update_acme_blog_posts_7.php
+1.0.16:
+    - 'Updated table acme_blog_categories'
+    - builder_table_update_acme_blog_categories_2.php
+1.0.17:
+    - 'Updated table acme_blog_comments'
+    - builder_table_update_acme_blog_comments_3.php
+1.0.18:
+    - 'Updated table acme_blog_posts'
+    - builder_table_update_acme_blog_posts_8.php
+1.0.19:
+    - 'Updated table acme_blog_posts'
+    - builder_table_update_acme_blog_posts_9.php
+1.0.20:
+    - 'Updated table acme_blog_posts'
+    - builder_table_update_acme_blog_posts_10.php
+1.0.21:
+    - 'Updated table acme_blog_categories'
+    - builder_table_update_acme_blog_categories_3.php
+1.0.22:
+    - 'Updated table acme_blog_comments'
+    - builder_table_update_acme_blog_comments_4.php
+1.0.23:
+    - 'Updated table acme_blog_posts'
+    - builder_table_update_acme_blog_posts_11.php
