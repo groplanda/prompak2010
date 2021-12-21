@@ -12,6 +12,8 @@
   pointer-events: none;
   background: #FFF;
 
+  $root: &;
+
   p {
     margin-bottom: 0;
   }
@@ -64,6 +66,14 @@
     align-items: center;
     font-size: 16px;
     color: $blueColor;
+
+    &.js-active {
+      #{$root} {
+        &__menu-arrow {
+          transform: rotate(-180deg);
+        }
+      }
+    }
   }
 
   &__menu-arrow {
@@ -71,6 +81,7 @@
     width: 16px;
     height: 16px;
     margin-left: 8px;
+    transition: all .2s ease;
   }
 
   &__menu-dropdown {
@@ -81,6 +92,7 @@
     color: $primary;
     padding: 12px 0;
     font-size: 15px;
+    display: block;
   }
 
   &__content-item {

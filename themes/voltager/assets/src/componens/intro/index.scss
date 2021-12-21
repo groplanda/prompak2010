@@ -179,11 +179,11 @@
   &__props-title {
     color: $whiteColor;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 20px;
 
     @media(min-width: 768px) {
-      font-size: 16px;
+      font-size: 18px;
     }
 
     @media(min-width: 992px) {
