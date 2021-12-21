@@ -8,6 +8,13 @@ tabs:
       default: ""
       placeholder: ""
 
+    theme_site_store:
+      tab: "Контакты"
+      label: "Адрес склада"
+      type: text
+      default: ""
+      placeholder: ""
+
     theme_site_open:
       tab: "Контакты"
       label: "График работы"

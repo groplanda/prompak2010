@@ -125,7 +125,7 @@ section:not(.slide), section:not(.intro) {
       background-color: transparent;
       transition: all 0.5s ease-in-out;
       margin-bottom: 30px;
-      background-color: $lightColor;
+      background-color: $bgColor;
   }
   &__item:hover {
       box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
@@ -470,14 +470,17 @@ footer {
         color: $lightColor;
       }
       &__item {
-          padding-bottom: 20px;
+          margin-bottom: 15px;
           padding-left: 20px;
           position: relative;
+          display: flex;
+          align-items: center;
           &::before {
               content: '\f879';
               font-family: "Font Awesome 5 Free";
               left: 0;
-              top: 2px;
+              top: 50%;
+              transform: translateY(-50%);
               position: absolute;
               font-weight: 900;
               font-size: 12px;
@@ -505,6 +508,7 @@ footer {
       text-transform: uppercase;
       letter-spacing: 4px;
       line-height: 1;
+      margin-bottom: 0;
   }
 }
 

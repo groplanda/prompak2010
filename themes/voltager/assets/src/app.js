@@ -133,25 +133,31 @@ let check_if_load = false;
 //Функция создания карты сайта и затем вставки ее в блок с идентификатором &#34;map-yandex&#34;
 function init () {
   var myMapTemp = new ymaps.Map("map", {
-    center: [48.661867, 44.461890], // координаты центра на карте
-    zoom: 15, // коэффициент приближения карты
+    center: [48.63635541460632,44.435514684702035], // координаты центра на карте
+    zoom: 12, // коэффициент приближения карты
     controls: ['zoomControl', 'fullscreenControl'] // выбираем только те функции, которые необходимы при использовании
   });
-  var myPlacemarkTemp = new ymaps.Placemark([48.661867, 44.461890], {
-      balloonContent: "<b>Промпак</b> <br>400019, г. Волгоград, ул. Слесарная, д.103",
-  }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
+  let PlacemarkAddress = new ymaps.Placemark([48.661867, 44.461890], {
+      balloonContent: "<b>Промпак</b> <br>г. Волгоград, ул. Слесарная, д.103",
+    },
+    {
       iconLayout: 'default#imageWithContent',
-      // Своё изображение иконки метки.
       iconImageHref: 'themes/voltager/assets/icons/map.svg',
-      // Размеры метки.
       iconImageSize: [60, 60],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
       iconImageOffset: [-25, -50],
-  });
-  myMapTemp.geoObjects.add(myPlacemarkTemp); // помещаем флажок на карту
+    });
+  let PlacemarkStore = new ymaps.Placemark([48.599660, 44.434492], {
+      balloonContent: "<b>Промпак</b> <br>г. Волгоград, ул. Никитина 2",
+    },
+    {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: 'themes/voltager/assets/icons/map.svg',
+      iconImageSize: [60, 60],
+      iconImageOffset: [-25, -50],
+    });
+
+  myMapTemp.geoObjects.add(PlacemarkAddress);
+  myMapTemp.geoObjects.add(PlacemarkStore);
 
   // Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
   var layer = myMapTemp.layers.get(0).get(0);

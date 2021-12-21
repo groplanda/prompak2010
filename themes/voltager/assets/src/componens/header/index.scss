@@ -240,7 +240,7 @@
     width: 240px;
     background: $blueColor;
     padding: 20px 8px;
-    z-index: 2;
+    z-index: 5;
     opacity: 0;
     pointer-events: none;
     transition: opacity .25s ease;
@@ -249,14 +249,12 @@
   &__nav-sublink {
     display: block;
     font-size: 16px;
+    margin-bottom: 10px;
     color: $whiteColor;
 
     @media(max-width: 991px) {
       font-size: 14px;
-    }
-
-    @media(max-width: 767px) {
-      font-size: 12px;
+      margin-bottom: 8px;
     }
 
     &:hover {
