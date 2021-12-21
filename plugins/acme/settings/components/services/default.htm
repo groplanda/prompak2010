@@ -11,13 +11,12 @@
 					{% set image = item.service_image %}
 					<div class="col-12 col-md-4">
 							<div class="services__item text-center">
-									<a href="{{ item.service_link }}">
-										<img src="{{ image|media|resize(75, 75, { mode: 'crop', quality: '80', extension: 'png' }) }}" alt="{{ item.service_title }}" class="d-block m-auto" >
+									<a href="{{ item.service_link }}" class="services__item-box">
+										<img src="{{ image|media|resize(75, 75, { mode: 'crop', quality: '80', extension: 'png' }) }}" alt="{{ item.service_title }}" class="d-block m-auto services__item-img" >
 									</a>
-									<h5>{{ item.service_title }}</h5>
-									<p>{{ item.service_desc }}</p>
-									<div class="divider-40"></div>
-									<a class="link" href="{{ item.service_link }}">Подробнее</a>
+									<div class="services__item-title">{{ item.service_title }}</div>
+									<p class="services__item-description">{{ item.service_desc }}</p>
+									<a class="services__item-link" href="{{ item.service_link }}">Подробнее</a>
 							</div>
 					</div><!--item-->
 					{% endfor %}

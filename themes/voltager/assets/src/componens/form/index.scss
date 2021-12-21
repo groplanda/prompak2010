@@ -1,0 +1,147 @@
+.form-horizontal {
+  padding: 100px 0;
+  background-color: $bgColor;
+
+  $root: &;
+
+  &__row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+
+    @media(min-width: 768px) {
+      flex-direction: row;
+      margin: 0 -10px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+
+    @media(min-width: 768px) {
+      width: calc(25% - 20px);
+      margin: 0 10px;
+    }
+
+    @media (min-width: 992px) {
+      width: calc(20% - 20px);
+      margin: 0 10px;
+    }
+
+    &.has-error {
+      #{$root} {
+        &__input {
+          border-color: #dc3545;
+        }
+      }
+    }
+
+    &_title {
+      @media (min-width: 768px) and (max-width: 991px)  {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__title {
+    color: $secondary;
+    line-height: 1.2;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    @media (min-width: 992px) and (max-width: 1199px)  {
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    span {
+      display: block;
+      color: $blueColor;
+      font-weight: bold;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    background-color: $whiteColor;
+    border: 1px solid rgba(20, 29, 40, 0.1);
+    height: 50px;
+    padding: 10px 20px;
+    color: $secondary;
+    transition: .15s;
+    font-size: 16px;
+
+    &::placeholder {
+      @include placeholder($secondary);
+    }
+
+    &:focus {
+      border-color: $secondary;
+    }
+  }
+
+  &__error {
+    color: #dc3545;
+    font-size: 12px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    @media(min-width: 768px) {
+      margin-top: 2px;
+    }
+  }
+}
+
+.form-modal {
+  $root: &;
+
+  &__group {
+    position: relative;
+    margin-bottom: 20px;
+
+    &.has-error {
+      #{$root} {
+        &__input {
+          border-color: #dc3545;
+        }
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    background-color: $whiteColor;
+    border: 1px solid rgba(20, 29, 40, 0.1);
+    height: 50px;
+    padding: 10px 20px;
+    color: $secondary;
+    transition: .15s;
+    font-size: 16px;
+
+    &::placeholder {
+      @include placeholder($secondary);
+    }
+
+    &:focus {
+      border-color: $secondary;
+    }
+  }
+
+  &__error {
+    color: #dc3545;
+    font-size: 12px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    @media(min-width: 768px) {
+      margin-top: 2px;
+    }
+  }
+}

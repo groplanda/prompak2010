@@ -1,37 +1,66 @@
-<section class="form">
-  <div class="container">
-      <form class="form-wrap d-flex"
-       data-request="{{ __SELF__ }}::onSend"
-  data-request-validate
-  data-request-flash
-      >
-          <div class="form-wrap__item">
-              <div class="title">Оставьте заявку <br><span>прямо сейчас</span>  </div>
-          </div><!--item-->
+<div class="form-horizontal">
+    <div class="container form-horizontal__container">
+        <form
+            class="row form-horizontal__row"
+            data-request="{{ __SELF__ }}::onSend"
+            data-request-validate
+            data-request-flash
+        >
+            <div class="form-horizontal__item form-horizontal__item_title">
+                <div class="form-horizontal__title">
+                    Оставьте заявку <span>прямо сейчас</span>
+                </div>
+            </div>
+            <!--item-->
 
-          <div class="form-wrap__item valid">
-              <input class="input" type="text" name="name" placeholder="Ваше имя">
-              <span class="text-danger small" data-validate-for="name"></span>
-          </div><!--item-->
+            <div class="form-horizontal__item valid">
+                <input
+                    class="form-horizontal__input"
+                    type="text"
+                    name="name"
+                    placeholder="Ваше имя"
+                />
+                <span class="form-horizontal__error" data-validate-for="name"></span>
+            </div>
+            <!--item-->
 
-          <div class="form-wrap__item valid">
-              <input class="input phone__mask" type="text"  name="phone" placeholder="Ваш телефон">
-              <span class="text-danger small" data-validate-for="phone"></span>
-          </div><!--item-->
+            <div class="form-horizontal__item valid">
+                <input
+                    class="form-horizontal__input phone__mask"
+                    type="text"
+                    name="phone"
+                    placeholder="Ваш телефон"
+                />
+                <span class="form-horizontal__error" data-validate-for="phone"></span>
+            </div>
+            <!--item-->
 
-          <div class="form-wrap__item valid">
-              <input class="input" type="email" name="user_mail" placeholder="Ваш e-mail">
-              <span class="text-danger small" data-validate-for="user_mail"></span>
-          </div><!--item-->
+            <div class="form-horizontal__item valid">
+                <input
+                    class="form-horizontal__input"
+                    type="email"
+                    name="user_mail"
+                    placeholder="Ваш e-mail"
+                />
+                <span class="form-horizontal__error" data-validate-for="user_mail"></span>
+            </div>
+            <!--item-->
 
-          <div class="form-wrap__item">
-              <button type="submit" class="theme-btn rounded-pill w-100" data-attach-loading>Отправить</button>
-          </div><!--item-->
-    {% flash %}
-      <div class="alert alert-{{ type }}" data-interval="4">
-          {{ message }}
-      </div>
-    {% endflash %}
-      </form>
-  </div>
-</section>
+            <div class="form-horizontal__item">
+                <button
+                    type="submit"
+                    class="theme-btn rounded-pill w-100 form-horizontal__button"
+                    data-attach-loading
+                >
+                    Отправить
+                </button>
+            </div>
+            <!--item-->
+            {% flash %}
+            <div class="alert alert-{{ type }}" data-interval="4">
+                {{ message }}
+            </div>
+            {% endflash %}
+        </form>
+    </div>
+</div>

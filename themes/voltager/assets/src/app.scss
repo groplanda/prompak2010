@@ -1,6 +1,7 @@
 @import "./base/vars.scss";
 @import "./base/fonts.scss";
 @import "./base/reset.css";
+@import "./base/mixins.scss";
 @import "./plugins/bootstrap.min.css";
 
 body {
@@ -147,3 +148,5 @@ textarea {
 @import "./componens/single-product";
 @import "./componens/categories";
 @import "./componens/category";
+@import "./componens/form";
+@import "./componens/services";

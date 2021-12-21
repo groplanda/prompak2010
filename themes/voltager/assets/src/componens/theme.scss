@@ -1,7 +1,3 @@
-section:not(.slide), section:not(.intro) {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
 .slide {
   width: 100%;
   min-height: 750px;
@@ -74,124 +70,13 @@ section:not(.slide), section:not(.intro) {
       }
   }
 }
-.input {
-  width: 100%;
-  background-color:$whiteColor;
-  border: 1px solid rgba(20, 29, 40, 0.1);
-  height: 50px;
-  padding: 10px 20px;
-  color: $secondary;
-  outline: none;
-  transition: .15s;
-  font-size: 16px;
-  &::placeholder {
-      color: $secondary;
-  }
-  &:focus {
-      border-color: $secondary;
-  }
-}
-.form {
-  background-color: $bgColor;
-  color: $secondary;
-  .form-wrap {
-      align-items: center;
-      justify-content: space-between;
-      &__item {
-          width: calc(100% / 5 - 20px);
-          margin: 0 10px;
-          position: relative;
-          .title {
-              line-height: 1;
-              font-weight: 700;
-              font-size: 20px;
-              letter-spacing: 2px;
-              span {
-                  color: $blueColor;
-                  font-weight: bolder;
-              }
-          }
-          .theme-btn {
-              height: 50px;
-          }
 
-          .text-danger {
-            font-size: 12px;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            @media(min-width: 768px) {
-              margin-top: 2px;
-            }
-          }
-      }
-  }
-}
-.services {
-  &__row {
-      margin-top: 80px;
-  }
-  &__item {
-      padding: 40px;
-      box-shadow: 0px 2px 5px 0.5em rgba(0, 0, 0, 0);
-      background-color: transparent;
-      transition: all 0.5s ease-in-out;
-      margin-bottom: 30px;
-      background-color: $bgColor;
-  }
-  &__item:hover {
-      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-  }
-  .icon {
-      color: $blueColor;
-      font-size: 65px;
-  }
-  h5 {
-      font-weight: 500;
-      margin-top: 20px;
-      margin-bottom: 15px;
-      text-transform: capitalize;
-      font-size: 20px;
-  }
-  p {
-      margin: 0;
-  }
-  a.link {
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      position: relative;
-      color: $primary;
-      font-size: 13px;
-      &::before {
-          content: '';
-          display: inline-block;
-          position: absolute;
-          background-color: $primary;
-          width: 100%;
-          height: 1px;
-          bottom: -5px;
-          transition: all 0.3s ease-in-out;
-      }
-      &::after {
-          content: '\f054';
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
-          font-size: 10px;
-          padding-left: 3px;
-          color: $primary;
-          visibility: visible !important;
-      }
-      &:hover {
-              color: $blueColor;
-          &::before {
-              width: 0;
-          }
-      }
-  }
-
-}
 .about {
+  padding: 60px 0;
+
+  @media(min-width: 768px) {
+    padding: 100px 0;
+  }
   .post {
       margin-top: 110px;
       p {
@@ -218,6 +103,12 @@ section:not(.slide), section:not(.intro) {
 .testimonial {
   background-color: $secondary;
   position: relative;
+  padding: 60px 0;
+
+  @media(min-width: 768px) {
+    padding: 100px 0;
+  }
+
   &__line {
       position: absolute;
       top: 0;
@@ -295,6 +186,11 @@ section:not(.slide), section:not(.intro) {
       }
 }   }
 .news {
+  padding: 60px 0;
+
+  @media(min-width: 768px) {
+    padding: 100px 0;
+  }
   &__wrap {
       margin-top: 80px;
       .item {
@@ -398,6 +294,11 @@ section:not(.slide), section:not(.intro) {
 }
 .question {
   background-image: url('/themes/voltager/assets/images/question.jpg');
+  padding: 60px 0;
+  @media(min-width: 768px) {
+    padding: 100px 0;
+  }
+
   &__title {
       font-size: 65px;
       line-height: 100px;
