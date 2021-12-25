@@ -1,6 +1,8 @@
 .services {
   padding: 60px 0;
 
+  $root: &;
+
   @media(min-width: 768px) {
     padding: 100px 0;
   }
@@ -75,33 +77,26 @@
     position: relative;
     color: $primary;
     font-size: 13px;
-
-    &::before {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      background-color: $primary;
-      width: 100%;
-      height: 1px;
-      bottom: -5px;
-      transition: all 0.3s ease-in-out;
-    }
-
-    &::after {
-      content: '\f054';
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-size: 10px;
-      padding-left: 3px;
-      color: $primary;
-      visibility: visible !important;
-    }
+    display: flex;
+    align-items: center;
 
     &:hover {
       color: $blueColor;
-      &::before {
-        width: 0;
+
+      #{$root} {
+        &__item-ico {
+          color: $blueColor;
+          transform: translateX(2px);
+        }
       }
     }
+  }
+
+  &__item-ico {
+    color: $primary;
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    transition: all .2s ease;
   }
 }
