@@ -79,6 +79,7 @@
     font-size: 13px;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     &:hover {
       color: $blueColor;
@@ -86,7 +87,7 @@
       #{$root} {
         &__item-ico {
           color: $blueColor;
-          transform: translateX(2px);
+          transform: translateX(4px);
         }
       }
     }
@@ -94,8 +95,8 @@
 
   &__item-ico {
     color: $primary;
-    width: 14px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
     margin-left: 4px;
     transition: all .2s ease;
   }
