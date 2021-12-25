@@ -2,10 +2,10 @@ description = "Footer menu"
 [viewBag]
 ==
 
-<ul class="{{ class }} d-flex flex-column text-center w-100">
+<ul class="{{ class }} d-flex flex-column w-100 footer__menu-list">
     {% for item in items %}
-    <li class="{{ item.isActive ? 'active' : '' }}">
-        <a href="{{ item.url }}">{{ item.title }}</a>
+    <li class="{{ item.isActive ? 'active ' : '' }}footer__menu-item">
+        <a href="{{ item.url }}" class="footer__menu-link">{{ item.title }}</a>
     </li>
     {% endfor %}
 </ul>

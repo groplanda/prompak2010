@@ -130,24 +130,55 @@ sortOrder = "desc"
 
             {% component 'formwidget::horizontal' %} {% component 'services' %}
 
-            <section class="about">{% page %}</section>
+            <section class="about">
+              <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md-8 col-lg-7">
+                        <div class="heading">
+                          <div class="heading__suptitle w-100 text-center">О компании</div>
+                          <h2 class="heading__title w-100 text-center">
+                            <span class="heading__title-text">"ПромПак"</span>
+                          </h2>
+                        </div>
+
+                        <div class="about__post">
+                          {% page %}
+                        </div>
+
+                        <div class="d-flex about__button-row">
+                            <a href="#" class="popup-open theme-btn rounded-pill d-block about__button-link"
+                                >Заказать звонок</a
+                            >
+                            <a href="/about" class="theme-btn rounded-pill d-block about__button-link"
+                                >Читать далее</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-lg-5">
+                        <div class="about__image">
+                            <img
+                                src="{{ 'assets/images/about.jpg' | theme | resize(480, false, { mode: 'crop', quality: '80' }) }}"
+                                alt="Почему мы?"
+                                class="about__image-mask"
+                            />
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </section>
 
             {% component 'feedbacklist' %}
 
-            <section class="slide question">
+            <section class="question">
                 <div class="container">
-                    <div class="caption text-center">
-                        <div>
-                            <p>Остались вопросы?</p>
+                    <div class="question__caption text-center">
+                        <div class="question__caption-wrap">
+                            <p class="question__suptitle">Остались вопросы?</p>
                             <div class="question__title">Звоните сейчас.</div>
-                            <div class="phone">
-                                <a
-                                    href="tel:{{ this.theme.theme_site_phones[0].phone_href }}"
-                                    >{{
-                                    this.theme.theme_site_phones[0].phone_text
-                                    }}</a
-                                >
-                            </div>
+                            <a href="tel:{{ this.theme.theme_site_phones[0].phone_href }}" class="question__phone">
+                              {{ this.theme.theme_site_phones[0].phone_text}}
+                            </a>
                             <button class="popup-open theme-btn rounded-pill question__btn">
                                 Заказать звонок
                             </button>

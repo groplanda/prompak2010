@@ -1,8 +1,9 @@
 description = "Single Category"
 
-[carwidget]
-
 [formwidget]
+
+[BlogPosts]
+maxItems = 5
 ==
 <!DOCTYPE html>
 <html lang="ru">
@@ -15,7 +16,7 @@ description = "Single Category"
 
         <main>
           {% partial "app/breadcrumbs" %}
-          {% component 'carwidget' %}
+          {% component 'BlogPosts' %}
         </main>
 
         <!-- Footer -->

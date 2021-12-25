@@ -2,10 +2,12 @@
 
 <section id="{{__SELF__.id}}" class="services">
 	<div class="container">
-			<h6 class="theme-subtitle w-100 text-center">{{service.description|raw}}</h6>
-			<h2 class="theme-title w-100 text-center">
-					<span>{{service.title|raw}}</span>
-			</h2>
+      <div class="heading">
+        <div class="heading__suptitle w-100 text-center">{{service.description|raw}}</div>
+        <h2 class="heading__title w-100 text-center">
+          <span class="heading__title-text">{{service.title|raw}}</span>
+        </h2>
+      </div>
 			<div class="row services__row justify-content-center">
 					{% for item in service.services %}
 					{% set image = item.service_image %}

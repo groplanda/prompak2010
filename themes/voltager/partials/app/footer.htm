@@ -5,10 +5,10 @@ code = "footerMenu"
 ==
 <footer class="footer">
   <div class="container">
-    <div class="row footer_row">
-        <div class="col-md-4 col-content">
-            <h6>О нас</h6>
-            <div class="content">{% content 'footer-about.htm' %}</div>
+    <div class="row footer__row">
+        <div class="col-md-4 footer__content">
+            <h6 class="footer__heading">О нас</h6>
+            <div class="footer__content-text">{% content 'footer-about.htm' %}</div>
             <div class="socials d-flex">
                 {% if this.theme.theme_site_vk %}
                 <a
@@ -107,59 +107,59 @@ code = "footerMenu"
                 {% endif %}
             </div>
         </div>
-        <div class="col-md-4 col-menu">
-            <h6 class="text-center">Меню</h6>
+        <div class="col-md-4 footer__menu">
+            <h6 class="footer__heading footer__heading_center">Меню</h6>
             {% partial 'app/footer-menu' items=menuItems class='menu' %}
         </div>
-        <div class="col-md-4 col-contact">
-            <h6>Контакты</h6>
-            <div class="contact">
+        <div class="col-md-4 footer__contact">
+            <h6 class="footer__heading">Контакты</h6>
+            <div class="footer__contact-body">
                 {% for item in this.theme.theme_site_phones %}
-                <div class="contact__item phone">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="contact__item-ico" viewBox="0 0 16 16">
+                <div class="footer__contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="footer__contact-ico" viewBox="0 0 16 16">
                       <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
                     </svg>
-                    <a class="contact__item-text" href="tel:{{ item.phone_href }}"
+                    <a class="footer__contact-text footer__contact-link" href="tel:{{ item.phone_href }}"
                         >{{ item.phone_text }}</a
                     >
                 </div>
                 {% endfor %}
 
-                <div class="contact__item email">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="contact__item-ico" viewBox="0 0 16 16">
+                <div class="footer__contact-item email">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="footer__contact-ico" viewBox="0 0 16 16">
                     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
                   </svg>
-                    <a class="contact__item-text" href="mailto:{{ this.theme.theme_site_mail }}"
+                    <a class="footer__contact-text footer__contact-link" href="mailto:{{ this.theme.theme_site_mail }}"
                         >{{ this.theme.theme_site_mail }}</a
                     >
                 </div>
                 {% if this.theme.theme_site_address %}
-                <div class="contact__item adress">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="contact__item-ico" viewBox="0 0 16 16">
+                <div class="footer__contact-item adress">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="footer__contact-ico" viewBox="0 0 16 16">
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
                   </svg>
-                  <span class="contact__item-text">г. Волгоград, {{ this.theme.theme_site_address }}</span>
+                  <span class="footer__contact-text">г. Волгоград, {{ this.theme.theme_site_address }}</span>
                 </div>
                 {% endif %}
                 {% if this.theme.theme_site_store %}
-                <div class="contact__item adress">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="contact__item-ico" viewBox="0 0 16 16">
+                <div class="footer__contact-item adress">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="footer__contact-ico" viewBox="0 0 16 16">
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
                   </svg>
-                  <span class="contact__item-text">г. Волгоград, {{ this.theme.theme_site_store }}</span>
+                  <span class="footer__contact-text">г. Волгоград, {{ this.theme.theme_site_store }}</span>
                 </div>
                 {% endif %}
-                <div class="contact__item open">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="contact__item-ico" viewBox="0 0 16 16">
+                <div class="footer__contact-item open">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="footer__contact-ico" viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
                   </svg>
-                  <span class="contact__item-text">{{ this.theme.theme_site_open }}</span>
+                  <span class="footer__contact-text">{{ this.theme.theme_site_open }}</span>
                 </div>
             </div>
         </div>
     </div>
   </div>
-  <div class="footer__bottom text-center">
-      <p>Copyright © 2021</p>
+  <div class="footer__bottom">
+      <p class="footer__bottom-descr">Copyright © 2021</p>
   </div>
 </footer>

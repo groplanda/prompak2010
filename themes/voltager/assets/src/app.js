@@ -4,11 +4,6 @@ import 'jquery.maskedinput/src/jquery.maskedinput.js'
 require('lightbox2/dist/js/lightbox.min.js');
 
 $(document).ready(function($) {
-  const preloader = document.getElementById('preloader');
-
-  setTimeout( () => {
-      preloader.classList.add('fade')
-  }, 500);
 
   let IS_MOBILE = true,
       IS_OPEN_MODAL = false;
@@ -113,21 +108,9 @@ $(document).ready(function($) {
   });
 
 
-    $('.post-1').wrapAll('<div class="col-lg-5">');
-    $('.post-2, .post-3').wrapAll('<div class="col-lg-7">');
-    $('.phone__mask').mask("8(999)999-99-99");
-
-    $('li.has-child > a').on('click', function(e){
-
-        $(this).siblings('.sub-menu').slideToggle();
-        $(this).parent('li').toggleClass('open');
-        e.preventDefault();
-        e.stopPropagation();
-    });
-
 //yandex map
 
-const spinner = $('.ymap-container').children('.loader');
+const spinner = $('.ymap').children('.loader');
 let check_if_load = false;
 
 //Функция создания карты сайта и затем вставки ее в блок с идентификатором &#34;map-yandex&#34;
@@ -165,7 +148,7 @@ function init () {
   // Решение по callback-у для определения полной загрузки карты
   waitForTilesLoad(layer).then(function() {
     // Скрываем индикатор загрузки после полной загрузки карты
-    spinner.removeClass('is-active');
+    spinner.removeClass('loading_active').addClass('loading_hide');
   });
 }
 
@@ -226,14 +209,14 @@ function loadScript(url, callback){
 
 // Основная функция, которая проверяет когда мы навели на блок с классом &#34;ymap-container&#34;
 var ymap = function() {
-  $('.ymap-container').mouseenter(function(){
+  $('.ymap').mouseenter(function(){
       if (!check_if_load) { // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
 
 	  	// Чтобы не было повторной загрузки карты, мы изменяем значение переменной
         check_if_load = true;
 
 		// Показываем индикатор загрузки до тех пор, пока карта не загрузится
-        spinner.addClass('is-active');
+        spinner.removeClass('loading_hide').addClass('loading_active');
 
 		// Загружаем API Яндекс.Карт
         loadScript("//api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function(){
@@ -250,6 +233,13 @@ $(function() {
 //Запускаем основную функцию
     ymap();
 
+});
+
+const preloader = document.getElementById('preloader');
+
+setTimeout( () => {
+    preloader.classList.remove('loading_active');
+    preloader.classList.add('loading_hide')
 });
 
 });

@@ -66,3 +66,12 @@
 1.0.23:
     - 'Updated table acme_blog_posts'
     - builder_table_update_acme_blog_posts_11.php
+1.0.24:
+    - 'Updated table acme_blog_categories'
+    - builder_table_update_acme_blog_categories_4.php
+1.0.25:
+    - 'Updated table acme_blog_categories'
+    - builder_table_update_acme_blog_categories_5.php
+1.0.26:
+    - 'Updated table acme_blog_categories'
+    - builder_table_update_acme_blog_categories_6.php

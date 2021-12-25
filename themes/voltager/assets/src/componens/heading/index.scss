@@ -1,0 +1,64 @@
+.heading {
+  position: relative;
+
+  &__suptitle {
+    padding-bottom: 4px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-indent: 2px;
+    text-transform: uppercase;
+
+    @media (min-width: 768px) {
+      letter-spacing: 4.8px;
+      text-indent: 4.8px;
+    }
+  }
+
+  &__title {
+    font-size: 25px;
+    letter-spacing: 2px;
+
+    @media (min-width: 350px) {
+      font-size: 30px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+    }
+  }
+
+  &__title-text {
+    font-weight: bold;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      width: 34px;
+      height: 88px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $blueColor;
+    }
+    &::before {
+      -webkit-mask: url(/themes/voltager/assets/images//border-left.png) no-repeat center / contain;
+      left: -40px;
+
+      @media (min-width: 768px) {
+        left: -60px;
+      }
+    }
+    &::after {
+      -webkit-mask: url(/themes/voltager/assets/images/border-right.png) no-repeat center / contain;
+      right: -40px;
+
+      @media (min-width: 768px) {
+        right: -60px;
+      }
+    }
+
+  }
+
+}
