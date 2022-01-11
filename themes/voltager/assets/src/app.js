@@ -116,19 +116,10 @@ let check_if_load = false;
 //Функция создания карты сайта и затем вставки ее в блок с идентификатором &#34;map-yandex&#34;
 function init () {
   var myMapTemp = new ymaps.Map("map", {
-    center: [48.63635541460632,44.435514684702035], // координаты центра на карте
+    center: [48.599660, 44.434492], // координаты центра на карте
     zoom: 12, // коэффициент приближения карты
     controls: ['zoomControl', 'fullscreenControl'] // выбираем только те функции, которые необходимы при использовании
   });
-  let PlacemarkAddress = new ymaps.Placemark([48.661867, 44.461890], {
-      balloonContent: "<b>Промпак</b> <br>г. Волгоград, ул. Слесарная, д.103",
-    },
-    {
-      iconLayout: 'default#imageWithContent',
-      iconImageHref: 'themes/voltager/assets/icons/map.svg',
-      iconImageSize: [60, 60],
-      iconImageOffset: [-25, -50],
-    });
   let PlacemarkStore = new ymaps.Placemark([48.599660, 44.434492], {
       balloonContent: "<b>Промпак</b> <br>г. Волгоград, ул. Никитина 2",
     },
@@ -139,7 +130,6 @@ function init () {
       iconImageOffset: [-25, -50],
     });
 
-  myMapTemp.geoObjects.add(PlacemarkAddress);
   myMapTemp.geoObjects.add(PlacemarkStore);
 
   // Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
